@@ -936,6 +936,15 @@ function resetAll() {
   document.getElementById('FILE_INPUT').value = '';
 }
 
+// ===== POSTMESSAGE RECEIVER =====
+window.addEventListener('message', e => {
+  if (!e.data || e.data.type !== 'BRAWL_BRAIN_DATA') return;
+  const { payload } = e.data;
+  if (!payload || !payload.data) return;
+  const rawData = payload.data;
+  process(rawData);
+});
+
 function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
