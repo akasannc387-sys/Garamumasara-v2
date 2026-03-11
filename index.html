@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ブロスタ ティア表ジェネレーター</title>
+<title>Brawl Vision</title>
+<meta name="description" content="ブロスタの戦績データから自分専用のティア表を自動生成するツール。戦績計測サイトと連携してデータを自動取り込みできます。">
+<meta name="keywords" content="ブロスタ,ティア表,Brawl Stars,戦績分析,キャラランキング">
+<meta property="og:title" content="Brawl Vision">
+<meta property="og:description" content="ブロスタの戦績データから自分専用のティア表を自動生成。戦績計測サイトとの連携にも対応。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://garamumasara.vercel.app">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -448,8 +454,16 @@ body::after {
 
 <div class="header">
   <div>
-    <div class="logo">BRAWL TIER GEN</div>
-    <div class="logo-sub">戦績データからティア表を自動生成</div>
+    <div class="logo">BRAWL VISION</div>
+    <div class="logo-sub">TIER TABLE GENERATOR</div>
+  </div>
+</div>
+
+<!-- Description -->
+<div style="max-width:680px; margin:0 auto; padding:20px 20px 0;">
+  <div style="background:var(--sur); border:1px solid var(--bdr); border-radius:12px; padding:16px 20px; font-size:.78rem; color:var(--mut); line-height:1.8;">
+    <p style="margin-bottom:6px; color:var(--txt); font-weight:500;">自分の戦績から、自分だけのティア表を生成できるツールです。</p>
+    <p>編成記録ツールで記録した戦績データをもとに、キャラごとの勝率・出撃回数を集計してティア表を自動生成します。JSONファイルをドロップするだけで使えるほか、<a href="https://garamumasara.vercel.app/" target="_blank" rel="noopener" style="color:var(--acc);">ブロスタ編成記録ツール</a>からはワンクリックで自動取り込みにも対応しています。</p>
   </div>
 </div>
 
@@ -1003,5 +1017,20 @@ document.addEventListener('click', e => {
 
 window.addEventListener('scroll', hideTooltip, { passive: true });
 </script>
+
+<!-- Privacy Policy Footer -->
+<footer style="margin-top:60px; padding:24px 20px 40px; border-top:1px solid var(--bdr); max-width:900px; margin-left:auto; margin-right:auto;">
+  <details style="cursor:pointer;">
+    <summary style="font-family:'JetBrains Mono',monospace; font-size:.62rem; letter-spacing:.1em; color:var(--mut); text-transform:uppercase; user-select:none;">
+      プライバシーポリシー
+    </summary>
+    <div style="margin-top:14px; font-size:.75rem; color:var(--mut); line-height:1.8;">
+      <p style="margin-bottom:8px;">本ツールはブラウザ上で動作し、読み込んだJSONファイルのデータはサーバーに送信されません。すべての処理はお使いの端末内で完結します。</p>
+      <p style="margin-bottom:8px;">フォントの読み込みにGoogle Fonts（fonts.googleapis.com）を使用しています。これにともないGoogleのサーバーへのアクセスが発生する場合があります。詳細は<a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--acc);">Googleのプライバシーポリシー</a>をご確認ください。</p>
+      <p style="margin-bottom:8px;">本ツールはSupercellの非公式ファンコンテンツです。Supercellによる承認・後援はありません。</p>
+      <p>お問い合わせ：なし</p>
+    </div>
+  </details>
+</footer>
 </body>
 </html>
